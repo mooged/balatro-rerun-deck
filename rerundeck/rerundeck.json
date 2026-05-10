@@ -1,0 +1,17 @@
+{
+  "id": "rerundeck",
+  "name": "Rerun Deck",
+  "author": [
+    "Anonymous"
+  ],
+  "description": "Custom jokers created with Joker Forge",
+  "prefix": "rerundec",
+  "main_file": "main.lua",
+  "version": "1.0.0",
+  "priority": 0,
+  "badge_colour": "666665",
+  "badge_text_colour": "FFFFFF",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0827c)"
+  ]
+}
