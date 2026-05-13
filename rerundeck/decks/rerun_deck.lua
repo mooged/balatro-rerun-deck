@@ -22,7 +22,7 @@ SMODS.Back {
     atlas = 'CustomDecks',
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval and G.GAME.blind.boss then
-            if ((G.GAME.pool_flags.rerundec_loop_active or false) and G.GAME.blind.boss and to_big(G.GAME.round_resets.ante) == to_big(8)) then
+            if ((G.GAME.pool_flags.mycustom_loop_active or false) and G.GAME.blind.boss and to_big(G.GAME.round_resets.ante) == to_big(8)) then
                 for i = 1, 1 do
                     G.E_MANAGER:add_event(Event({
                         func = function()
@@ -62,20 +62,9 @@ SMODS.Back {
             delay = 0.4,
             func = function()
                 card_eval_status_text(self, 'extra', nil, nil, nil, {message = "loop_active", colour = G.C.BLUE})
-                G.GAME.pool_flags.rerundec_loop_active = true
+                G.GAME.pool_flags.mycustom_loop_active = true
                 return true
             end
         }))
-        G.GAME.starting_params.dollars = G.GAME.starting_params.dollars +16
-        return {
-            
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    G.GAME.interest_cap = G.GAME.interest_cap +10
-                    return true
-                end
-            }))
-            
-        }
     end
 }

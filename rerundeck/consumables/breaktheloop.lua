@@ -30,7 +30,7 @@ SMODS.Consumable {
                 play_sound('timpani')
                 used_card:juice_up(0.3, 0.5)
                 card_eval_status_text(used_card, 'extra', nil, nil, nil, {message = "loop_active", colour = G.C.BLUE})
-                G.GAME.pool_flags.rerundec_loop_active = false
+                G.GAME.pool_flags.mycustom_loop_active = false
                 return true
             end
         }))

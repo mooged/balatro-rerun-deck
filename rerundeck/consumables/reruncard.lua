@@ -26,7 +26,7 @@ SMODS.Consumable {
     atlas = 'CustomConsumables',
     use = function(self, card, area, copier)
         local used_card = copier or card
-        if ((G.GAME.pool_flags.rerundec_loop_active or false) and to_big(G.GAME.round_resets.ante) == to_big(9) or to_big(G.GAME.round_resets.ante) == to_big(8)) then
+        if ((G.GAME.pool_flags.mycustom_loop_active or false) and to_big(G.GAME.round_resets.ante) == to_big(9) or to_big(G.GAME.round_resets.ante) == to_big(8)) then
             local mod = 1 - G.GAME.round_resets.ante
             ease_ante(mod)
             G.E_MANAGER:add_event(Event({
@@ -71,6 +71,6 @@ SMODS.Consumable {
         end
     end,
     can_use = function(self, card)
-        return (((G.GAME.pool_flags.rerundec_loop_active or false) and to_big(G.GAME.round_resets.ante) == to_big(9) or to_big(G.GAME.round_resets.ante) == to_big(8)))
+        return (((G.GAME.pool_flags.mycustom_loop_active or false) and to_big(G.GAME.round_resets.ante) == to_big(9) or to_big(G.GAME.round_resets.ante) == to_big(8)))
     end
 }

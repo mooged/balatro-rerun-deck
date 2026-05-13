@@ -5,8 +5,8 @@ SMODS.ConsumableType {
     collection_rows = { 4, 5 },
     shop_rate = 0,
     cards = {
-        ['c_rerundec_reruncard'] = true,
-        ['c_rerundec_breaktheloop'] = true
+        ['c_mycustom_reruncard'] = true,
+        ['c_mycustom_breaktheloop'] = true
     },
     loc_txt = {
         name = "Rerun Set",
